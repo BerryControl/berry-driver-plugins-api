@@ -1,7 +1,7 @@
 {
   "name": "berry-driver-plugins-api",
   "version": "0.1.0",
-  "description": "API that need to be implemented by driver plugins for BerryControl.",
+  "description": "API that needs to be implemented by driver plugins for BerryControl.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
