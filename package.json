@@ -1,0 +1,36 @@
+{
+  "name": "berry-driver-plugins-api",
+  "version": "0.1.0",
+  "description": "API that need to be implemented by driver plugins for BerryControl.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npmignore --auto",
+    "prepare": "npm run build",
+    "clean": "rm -f .npmignore && rm -rf `find . -name 'node_modules'` && rm -rf `find . -name 'dist'`"
+  },
+  "publishConfig": {
+    "ignore": [
+      "!dist/",
+      "src/",
+      "test/"
+    ]
+  },
+  "keywords": [
+    "driver",
+    "plugin",
+    "BerryControl"
+  ],
+  "author": "Thomas Bonk",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "npmignore": "^0.3.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "berry-plugin-manager": "github:BerryControl/berry-plugin-manager",
+    "guid-typescript": "^1.0.9"
+  }
+}
