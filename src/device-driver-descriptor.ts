@@ -25,10 +25,10 @@ import { DeviceDriver } from './device-driver'
  * Authentication method for device drivers that require pairing.
  */
 export enum AuthenticationMethod {
-    NONE = 0,
-    PIN,
-    PASSWORD,
-    USER_AND_PASSWORD
+    NONE = 'NONE',
+    PIN = 'PIN',
+    PASSWORD = 'PASSWORD',
+    USER_AND_PASSWORD = 'USER_AND_PASSWORD'
 }
 
 export interface PairingCredentials {
@@ -95,12 +95,12 @@ export abstract class DeviceDriverDescriptor
      * The ID must remain constant, even accross versions. Best practise is to
      * generate a V1 UUID once and always return it.
      */
-    public abstract get pluginId(): Guid;
+    public abstract get pluginId(): Guid
 
     /**
      * The plugin name that can be displayed by the host application.
      */
-    public abstract get displayName(): string;
+    public abstract get displayName(): string
 
     /**
      * Description for the plugin that can be displayed by the host application.
@@ -108,7 +108,7 @@ export abstract class DeviceDriverDescriptor
      * @remark
      * The description shall be plain text.
      */
-    public abstract get description(): string;
+    public abstract get description(): string
 
     /**
      * Authentication method for device drivers that require pairing.
